@@ -2,11 +2,16 @@ import AWS = require("aws-sdk");
 import { config } from "./config/config";
 
 //Credentials are auto set according to the documentation https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html and the default profile is "Default anyway"
+const credentials = new AWS.Credentials({
+  accessKeyId: config.aws_access_key_id,
+  secretAccessKey: config.aws_secret_access_key
+});
 
 export const s3 = new AWS.S3({
   signatureVersion: "v4",
   region: config.aws_region,
-  params: { Bucket: config.aws_media_bucket },
+  credentials: credentials,
+  params: { Bucket: config.aws_media_bucket }
 });
 
 // Generates an AWS signed URL for retrieving objects
