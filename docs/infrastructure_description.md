@@ -2,6 +2,8 @@
 
 Backend and Frontend are hosted on AWS.
 
+![Infrastructure diagram](infrastructure_diagram.png)
+
 ## Udagram API
 
 The backend uses Amazon Relational Database Service (RDS) to host the PostgreSQL database, Elastic Beanstalk (EB) to host the Server
