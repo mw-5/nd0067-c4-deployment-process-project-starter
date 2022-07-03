@@ -2,11 +2,16 @@
 
 ## Table of contents
 
+* [Pipeline diagram](#pipeline-diagram)
 * [Workflow](#workflow)
 * [Jobs](#jobs)
     * [Build](#build)
     * [Hold](#hold)
     * [Deploy](#deploy)
+
+## Pipeline diagram
+
+![Pipeline diagram](pipeline_diagram.png)
 
 ## Workflow
 
